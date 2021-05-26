@@ -1,0 +1,29 @@
+#include "calculator.h"
+#include "calculatorLucio.cpp"
+#include "calculatorJesse.cpp"
+
+int main(){
+  Display * display1 = new LucioDisplay();  
+  Display * display2 = new JesseDisplay();  
+  Display * display3 = new GabrielaDisplay();  
+  Display * display4 = new JeanDisplay();  
+ 
+  Cpu * cpu1 = new LucioC();  
+  Cpu * cpu2 = new LucioCpu();  
+  Cpu * cpu3 = new GabrielaDisplay();  
+  Cpu * cpu4 = new JeanDisplay();
+  
+  ...
+
+  
+Calculator *c1 = new CalculatorLucio(display1, cpu1, numKey1, opeKey1);
+  Calculator *c2 = new CalculatorLucio(display2, cpu2, numKey2, opeKey2);
+  Calculator *c3 = new CalculatorLucio(display3, cpu3, numKey3, opeKey3);
+  Calculator *c4 = new CalculatorLucio(display4, cpu4, numKey4, opeKey4);
+
+  CalculatorTest::run(c1);  
+  CalculatorTest::run(c2);  
+  CalculatorTest::run(c3);  
+  CalculatorTest::run(c4);  
+
+}
